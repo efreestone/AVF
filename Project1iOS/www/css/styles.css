@@ -71,11 +71,13 @@ h1 {
 h2 {
 	font-size: 18px;
 	font-weight:normal;
+	margin-top: -10px;
 }
 
 h3 {
 	font-size: 18px;
 	font-weight:normal;
+	margin-top: -8px;
 }
 
 p { /* error404 message */
@@ -87,7 +89,7 @@ p { /* error404 message */
     background-color: #f3f3f3;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    border: solid 1px #172934;
+    /*border: solid 1px #172934;*/
     margin-left: 25px;
     margin-right: 25px;
     margin-bottom: 15px;
@@ -105,7 +107,7 @@ legend { /*page titles */
     background-color: #f3f3f3;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    border: solid 1px #172934;
+    /*border: solid 1px #325972;*/
     margin: auto;
     padding: 10px;
     box-shadow: -3px 3px 8px 2px rgba(0,0,0,0.3);
@@ -154,14 +156,22 @@ header { /* name and assignment */
     overflow:visible;
     padding:0px;
     text-align:center;
+    background-color: #f3f3f3;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    /*border: solid 1px #325972;*/
+    margin: 20px 75px;
+    padding: 10px;
+    box-shadow: -3px 3px 8px 2px rgba(0,0,0,0.3);
+    
 }
 
 nav>a { /* native and api buttons */
 	font-family: "Helvetica", "Arial", sans-serif;
     display: inline-table;
     text-align: center;
-    background: -webkit-gradient(linear, left top, left bottom, from(#05c331), to(#026f1b));
-    background-color: #026f1b;
+    background: -webkit-gradient(linear, left top, left bottom, from(#29abe2), to(#0071bc));
+    /*background-color: #026f1b;*/
     color: #ffffff;
     font-size: 24px;
     padding: 10px 20%;

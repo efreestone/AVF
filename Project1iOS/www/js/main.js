@@ -37,8 +37,24 @@ var app = {
     }
 };
 
+
 $("#index").on("pageinit", function() {
-	//Code needed for index goes here
+
+	//Changepage function for api button
+	$("#seeAPI").on("click", function() {
+		$.mobile.changePage($("#api"));
+	});
+	
+	//Changepage function for native button
+	$("#seeNative").on("click", function() {
+		$.mobile.changePage($("#native"));
+	});
+	
+	//Changepage function for research button
+	$("#seeResearch").on("click", function() {
+		$.mobile.changePage($("#research"));
+	});
+		
 }); //End of index pageinit
 
 $("#api").on("pageinit", function() {
