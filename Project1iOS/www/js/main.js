@@ -41,10 +41,18 @@ $("#index").on("pageinit", function() {
 	//Code needed for index goes here
 }); //End of index pageinit
 
+$("#api").on("pageinit", function() {
+	//Code needed for api goes here
+}); //End of api pageinit
+
 $("#native").on("pageinit", function() {
 	//Code needed for native goes here
 }); //End of native pageinit
 
+$("#research").on("pageinit", function() {
+	//Code needed for research goes here
+}); //End of research pageinit
+
 $("#error404").on("pageinit", function() {
 	//Code needed for error404 goes here
-}); //End of dispData pageinit
+}); //End of error404 pageinit

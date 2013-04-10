@@ -61,10 +61,6 @@ body {
 h1 {
     font-size:24px;
     font-weight:normal;
-    margin:0px;
-    overflow:visible;
-    padding:0px;
-    text-align:center;
 }
 
 h2 {
@@ -75,6 +71,40 @@ h2 {
 h3 {
 	font-size: 18px;
 	font-weight:normal;
+}
+
+p { /* error404 message */
+	font-size: 16px;
+	font-weight: normal;
+	font-family: "Helvetica", "Arial", sans-serif;
+    overflow:visible;
+    text-align:center;
+    background-color: #f3f3f3;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: solid 1px #172934;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-shadow: -3px 3px 8px 2px rgba(0,0,0,0.3);
+    width: auto;
+}
+
+legend { /*page titles */
+	font-size: 16px;
+	font-weight: normal;
+	font-family: "Helvetica", "Arial", sans-serif;
+    overflow:visible;
+    text-align:center;
+    background-color: #f3f3f3;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: solid 1px #172934;
+    margin: auto;
+    padding: 10px;
+    box-shadow: -3px 3px 8px 2px rgba(0,0,0,0.3);
+    width: auto;
 }
 
 .event {
@@ -113,7 +143,7 @@ h3 {
     -webkit-animation:fade 3000ms infinite;
 }
 
-header {
+header { /* name and assignment */
 	font-family: "Helvetica", "Arial", sans-serif;
     margin:0px;
     overflow:visible;
@@ -121,18 +151,28 @@ header {
     text-align:center;
 }
 
-div#indexNav { /* Centering native and api buttons on index */
-	text-align: center;
-}
-
-nav>a { /* All <a> tags within nav. Display Data, Clear Local Data, etc */
-	text-align: center;
-    background-color: #f2fdff;
+nav>a { /* native and api buttons */
+	font-family: "Helvetica", "Arial", sans-serif;
+    display: inline-table;
+    text-align: center;
+    background: -webkit-gradient(linear, left top, left bottom, from(#05c331), to(#026f1b));
+    background-color: #026f1b;
+    color: #ffffff;
+    font-size: 24px;
+    padding: 10px 20%;
     -webkit-border-radius: 10px;
     border-radius: 10px;
     border: solid 1px #172934;
-    padding: 2px 7px;
-    font-family: "Helvetica", "Arial";
-    font-size: 24px;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#f2fdff), to(#97edfc));
+    text-shadow: 0 -1px 0 #172934;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+    box-shadow: -3px 3px 8px 2px rgba(0,0,0,0.3);
+}
+
+nav>a#home { /*override for return home button on err404 */
+	font-size: 20px;
+	padding: 10px;
 }
