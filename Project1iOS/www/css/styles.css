@@ -1,21 +1,10 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+Elijah Freestone
+AVF 1304
+Project 1 iOS
+4-18-13
+*/
+
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
@@ -41,7 +30,7 @@ body {
     height:100%;
     margin:0px;
     padding:0px;
-    text-transform:uppercase;
+    /*text-transform:uppercase;*/
     width:100%;
 }
 
@@ -78,6 +67,16 @@ h1 {
     text-align:center;
 }
 
+h2 {
+	font-size: 18px;
+	font-weight:normal;
+}
+
+h3 {
+	font-size: 18px;
+	font-weight:normal;
+}
+
 .event {
     border-radius:4px;
     -webkit-border-radius:4px;
@@ -112,4 +111,28 @@ h1 {
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
+}
+
+header {
+	font-family: "Helvetica", "Arial", sans-serif;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+div#indexNav { /* Centering native and api buttons on index */
+	text-align: center;
+}
+
+nav>a { /* All <a> tags within nav. Display Data, Clear Local Data, etc */
+	text-align: center;
+    background-color: #f2fdff;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: solid 1px #172934;
+    padding: 2px 7px;
+    font-family: "Helvetica", "Arial";
+    font-size: 24px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f2fdff), to(#97edfc));
 }
