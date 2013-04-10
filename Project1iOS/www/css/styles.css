@@ -34,6 +34,11 @@ body {
     width:100%;
 }
 
+.ui-page { /* Override JQM background and replace with my background*/
+	background-image: url("images/background-1.jpg");
+    background-repeat:repeat-x;
+}
+
 /* Portrait layout (default) */
 .app {
     background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
