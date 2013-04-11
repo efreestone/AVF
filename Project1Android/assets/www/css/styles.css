@@ -36,7 +36,7 @@ body {
 
 .ui-page { /* Override JQM background and replace with my background*/
 	background-image: url("images/background-1.jpg");
-    background-repeat:repeat-x;
+    background-repeat: repeat-xy;
 }
 
 /* Portrait layout (default) */
