@@ -172,7 +172,7 @@ nav>a { /* native and api buttons */
     display: inline-table;
     text-align: center;
     background: -webkit-gradient(linear, left top, left bottom, from(#29abe2), to(#0071bc));
-    background: -moz-linear-gradient(linear, left top, left bottom, from(#29abe2), to(#0071bc));
+    background: -moz-gradient(linear, left top, left bottom, from(#29abe2), to(#0071bc));
     /*background-color: #026f1b;*/
     color: #ffffff;
     font-size: 24px;
