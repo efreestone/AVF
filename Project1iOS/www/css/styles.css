@@ -36,7 +36,7 @@ body {
 
 .ui-page { /* Override JQM background and replace with my background*/
 	background-image: url("images/background-1.jpg");
-    background-repeat:repeat-x;
+    background-repeat:repeat-xy;
 }
 
 /* Portrait layout (default) */
@@ -71,7 +71,7 @@ h1 {
 h2 {
 	font-size: 18px;
 	font-weight:normal;
-	margin-top: -10px;
+	margin-top: -11px;
 }
 
 h3 {
@@ -159,11 +159,9 @@ header { /* name and assignment */
     background-color: #f3f3f3;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    /*border: solid 1px #325972;*/
     margin: 20px 75px;
     padding: 1px 10px;
     box-shadow: -3px 3px 8px 2px rgba(0,0,0,0.3);
-    
 }
 
 nav>a { /* native and api buttons */
@@ -172,8 +170,7 @@ nav>a { /* native and api buttons */
     text-align: center;
     background: -webkit-gradient(linear, left top, left bottom, from(#29abe2), to(#0071bc));
     background: -moz-linear-gradient(top, #29abe2, #0071bc);
-    /*background-color: #026f1b;*/
-    color: #ffffff;
+    color: #f3f3f3;
     font-size: 24px;
     padding: 10px 20%;
     -webkit-border-radius: 10px;
@@ -188,7 +185,7 @@ nav>a { /* native and api buttons */
     box-shadow: -3px 3px 8px 2px rgba(0,0,0,0.3);
 }
 
-nav>a#home { /*override for return home button on err404 */
+nav>a#home { /* override for return home button on err404 */
 	font-size: 20px;
 	padding: 10px;
 }
