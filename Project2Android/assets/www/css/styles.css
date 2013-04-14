@@ -39,6 +39,28 @@ body {
     background-repeat: repeat-xy;
 }
 
+.ui-btn-inner { /* box around navbar buttons */
+	background: -webkit-gradient(linear, left top, left bottom, from(#5b5b5b), to(#272727));
+	/*background-color: #4a4949;*/
+	border: solid 1px #172934;
+	height: 24px;
+}
+
+.ui-btn-inner:active { /* Active state of navbar buttons */
+        background:-webkit-gradient(linear, left bottom, left top, from(#7c7c7c), to(#444444));
+}
+
+.ui-btn-text { /* apply color to navbar text */
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 20px;
+	color: #f3f3f3;
+}
+
+a.navbar { /* apply color to hide underline of navbar text */
+	color: #3b3b3b;
+	margin: 50px;
+}
+
 /* Portrait layout (default) */
 .app {
     background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
@@ -194,6 +216,10 @@ li>a.button { /* native and api buttons */
     margin-right: 25px;
     box-shadow: -3px 3px 8px 2px rgba(0,0,0,0.3);
     -webkit-box-shadow: -3px 3px 8px 2px rgba(0,0,0,0.3);
+}
+
+a.button:active { /* Active state of all blue buttons */
+	background: -webkit-gradient(linear, left top, left bottom, from(#37c2ff), to(#0388e1));
 }
 
 li>a.button#home { /* override for return home button on error404 to keep text on 1 line */
