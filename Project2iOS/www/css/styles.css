@@ -189,7 +189,7 @@ ul { /* remove bullets from ul and li */
 	padding: 0;
 }
 
-li>a.button { /* native and api buttons */
+a.button { /* native and api buttons */
 	font-family: "Helvetica", "Arial", sans-serif;
     display: inline-table;
     text-align: center;
@@ -214,7 +214,28 @@ a.button:active { /* Active state of all blue buttons */
 	background: -webkit-gradient(linear, left top, left bottom, from(#37c2ff), to(#0388e1));
 }
 
-li>a.button.smaller { /* override for return home button on error404 and research buttons to keep text on 1 line */
+a.button.smaller { /* override for return home button on error404 and research buttons to keep text on 1 line */
 	font-size: 26px;
 	padding: 10px;
+}
+
+input.search {
+	-webkit-appearance: none;
+	width: 90%;
+    height: 40px;
+    border: 1px solid #aaaaaa;
+    padding: 5px;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0px 1px 4px rgba(0,0,0,.2);
+    box-shadow: inset 0px 1px 4px rgba(0,0,0,.2);
+    text-align:center;
+    background-color: #f3f3f3;
 }

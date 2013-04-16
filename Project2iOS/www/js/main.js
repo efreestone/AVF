@@ -58,8 +58,26 @@ $("#index").on("pageinit", function() {
 }); //End of index pageinit
 
 $("#api").on("pageinit", function() {
-	//Code needed for api goes here
+	
+	//Changepage function for api button
+	$("#googleBtn").on("click", function() {
+		$.mobile.changePage($("#google"));
+	});
+
+	//Changepage function for twitter button
+	$("#twitterBtn").on("click", function() {
+		$.mobile.changePage($("#twitter"));
+	});
+	
 }); //End of api pageinit
+
+$("#google").on("pageinit", function() {
+	//Code needed for google goes here
+}); //End of google pageinit
+
+$("#twitter").on("pageinit", function() {
+	//Code needed for twitter goes here
+}); //End of twitter pageinit
 
 $("#native").on("pageinit", function() {
 	//Code needed for native goes here
