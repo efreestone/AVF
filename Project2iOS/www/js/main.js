@@ -73,8 +73,14 @@ $("#error404").on("pageinit", function() {
 	//Code needed for error404 goes here
 }); //End of error404 pageinit
 
-//global function for device info (on "native" and in nav bar
+//Global function for device info on native and in navbar
 $(".device").on("click", function() {
 	//device function will go here
 	//alert("device clicked");
 });
+
+//Global changePage function for home button in navbar and on error404
+$(".home").on("click", function() {
+	$.mobile.changePage($("#index"));
+});
+		
