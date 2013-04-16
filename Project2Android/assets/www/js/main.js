@@ -97,3 +97,8 @@ $(".error").on("click", function() {
 $(".rtnResearch").on("click", function() {
 	$.mobile.changePage($("#research"));
 });
+
+//changePage function for home buttons on navbar and error404
+$(".home").on("click", function() {
+	$.mobile.changePage($("#index"));
+});
