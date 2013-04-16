@@ -54,7 +54,7 @@
 				<nav data-role="navbar">
 					<ul>
 						<li><a href="index.html" Data-ajax="false">Home</a></li>
-						<li><a href="#error404" class="device" Data-ajax="false">Device Info</a></li>
+						<li><a href="#" class="device error" Data-ajax="false">Device Info</a></li>
 					</ul>
 				</nav>
 			</section>
@@ -74,9 +74,9 @@
 			
 			<nav>
 				<ul>
-					<li><a href="#error404" id="google" class="button" data-role="none" Data-ajax="false">Google Search</a></li>
+					<li><a href="#" id="google" class="button error" data-role="none" Data-ajax="false">Google Search</a></li>
 		
-					<li><a href="#error404" id="twitter" class="button" data-role="none" Data-ajax="false">Twitter Search</a></li>
+					<li><a href="#" id="twitter" class="button error" data-role="none" Data-ajax="false">Twitter Search</a></li>
 				</ul>
 			</nav>
 			
@@ -85,7 +85,7 @@
 				<nav data-role="navbar">
 					<ul>
 						<li><a href="index.html" Data-ajax="false">Home</a></li>
-						<li><a href="#error404" class="device" Data-ajax="false">Device Info</a></li>
+						<li><a href="#" class="device error" Data-ajax="false">Device Info</a></li>
 					</ul>
 				</nav>
 			</section>
@@ -105,15 +105,15 @@
 			
 			<nav>
 				<ul>
-					<li><a href="#error404" id="camera" class="button" data-role="none" Data-ajax="false">Camera</a></li>
+					<li><a href="#" id="camera" class="button error" data-role="none" Data-ajax="false">Camera</a></li>
 			
-					<li><a href="#error404" id="contacts" class="button" data-role="none" Data-ajax="false">Contacts</a></li>
+					<li><a href="#" id="contacts" class="button error" data-role="none" Data-ajax="false">Contacts</a></li>
 			
-					<li><a href="#error404" class="device button" data-role="none" Data-ajax="false">Device Info</a></li>
+					<li><a href="#" class="device button error" data-role="none" Data-ajax="false">Device Info</a></li>
 			
-					<li><a href="#error404" id="geolocation" class="button" data-role="none" Data-ajax="false">Geolocation</a></li>
+					<li><a href="#" id="geolocation" class="button error" data-role="none" Data-ajax="false">Geolocation</a></li>
 			
-					<li><a href="#error404" id="mic" class="button" data-role="none" Data-ajax="false">Microphone</a></li>
+					<li><a href="#" id="mic" class="button error" data-role="none" Data-ajax="false">Microphone</a></li>
 				</ul>
 			</nav>
 			
@@ -122,7 +122,7 @@
 				<nav data-role="navbar">
 					<ul>
 						<li><a href="index.html" Data-ajax="false">Home</a></li>
-						<li><a href="#error404" class="device" Data-ajax="false">Device Info</a></li>
+						<li><a href="#" class="device error" Data-ajax="false">Device Info</a></li>
 					</ul>
 				</nav>
 			</section>
@@ -140,20 +140,203 @@
 			
 			<p id="researchTitle">Research Topics</p>
 			
-			<p>Research topics will go here.</p>
+			<nav>
+				<ul>
+					<li><a href="#" id="week1Btn" class="button" data-role="none" Data-ajax="false">Week 1</a></li>
+				
+					<li><a href="#" id="week2Btn" class="button" data-role="none" Data-ajax="false">Week 2</a></li>
+					
+					<li><a href="#" id="week3Btn" class="button" data-role="none" Data-ajax="false">Week 3</a></li>
+					
+					<li><a href="#" id="week4Btn" class="button" data-role="none" Data-ajax="false">Week 4</a></li>
+				</ul>
+			</nav>
 			
 		<!-- Start of navbar -->
 			<section data-role="none" data-position="fixed" data-id="index">
 				<nav data-role="navbar">
 					<ul>
 						<li><a href="index.html" Data-ajax="false">Home</a></li>
-						<li><a href="#error404" class="device" Data-ajax="false">Device Info</a></li>
+						<li><a href="#" class="device error" Data-ajax="false">Device Info</a></li>
 					</ul>
 				</nav>
 			</section>
 		<!-- End of navbar -->
 		</section>
 	<!-- End of research -->
+	
+	<!-- Start of week1 -->
+		<section data-role="page" id="week1">
+			<header>
+				<h1>Elijah Freestone</h1>
+					<h2>Project 2 Android</h2>
+						<h3>AVF 1304</h3>
+			</header>
+			
+			<p id="week1Title">Week 1 Research Topic</p>
+			
+			<p>Q1: Less obvious perks of using 'live' data resources include logins and payments. How could Twitter be used in these two
+			scenarios?</p>
+			
+			<p>A1: "Sign in with Twitter" is based on a feature called "OAuth" that opens up authentication and authorization for the app to
+			use the API on the users behalf, all while the user never has to give their password to any third party application. This
+			security feature opens up a lot of different possibilities for integration. I believe there are a few different options for
+			payment with Twitter as well. The one I know of is "Amex Sync". This allows a user to tweet special hash tags and receive special
+			deals and discounts on products using their registered American Express card. The transaction is completed over twitter with more
+			special hash tags. When you tweet the first tag, the system sends you a unique tag to tweet in order to complete the transaction.
+			Although this isn't directly integrated into the Twitter API, its still very secure because the users card info is protected on
+			Amex's servers so their info is never out in the open. OAuth helps to close any other cracks in security for the transaction and
+			doesn't even allow Amex Sync access to any of the users info that isn't public. One thing I wasn't able to find much info on is
+			how vendors join in. Sync is also available for Facebook and Foursquare but I believe you just get coupons from them and can only
+			make purchases via Twitter as of now. I wasn't able to find any other similar services either, but I wouldn't be surprised to see
+			other Credit Card companies jump on the bandwagon if Sync does well. I don't think it would be extremely difficult to create a
+			mashup of Twitter and a payment API such as Paypal either.</p>
+			
+			<p>Q2: Visit Programmableweb.com and search for JSON-P data sources. Why would we need JSON-P, specifically?</p>
+			
+			<p>A2: We would need JSON-P specifically because it is one of the easiest ways for cross-domain communication. This opens up
+			doors for all kinds of different mashups.</p>
+			
+			<p>Q3: Based on the JSON-P search results: what data resource(s) do you think might pair well with which types of Native device
+			features?</p>
+			
+			<p>A3: One of the first resources that jumps out to me would be the Google Maps API paired with the Native Geolocation feature.
+			This is one of the features I will be demoing this month, however I am not sure if I will use the Google API as of yet. There are
+			several other map APIs available so I will be research them first as one may better suit my needs.</p>
+			
+			<p>Q4: Please describe any design and functionality intentions you may have for your Demo app components this month.</p>
+			
+			<p>A4: I am looking to build a wish list/gift idea app and this months demo app will be the core features of it. One of the main
+			features would be to allow the user to take pictures of an item they want or they think would be a good gift for another person
+			and share it with their contacts, on Twitter, or on Facebook. The image would contain geolocation to keep track of where the
+			image was taken, possibly with some sort of map integration and the ability to add captions to the post or notes (or a voice
+			recording) about the item that wouldn't be visible on the image post. In the future, I also hope to add the ability to shop for a
+			specific item via Google Shopping or Amazon from within the app. One thing I think would really help the shopping portion would
+			be bar code and QR code reading so the user can just snap a picture of the code and get the price of the item from several
+			retailers.</p>
+			
+			<p>Q5: Briefly describe some past 'lessons learned' regarding workflow as it relates to research, design, development, etc.</p>
+			
+			<p>A5: One lesson I've learned is to always have a game plan before really diving in. If you know the basics about what you need,
+			you can plan the workflow much better and avoid having to go back to research once you?ve moved on to the design phase. There
+			have been a few times where I had to do this and it can really wreak havoc on your workflow, especially if you?re the type of
+			person that has to be in a particular ?mode? for the individual parts like me. </p>
+			
+			<nav>
+				<ul>
+					<li>
+					<a href="#" class="button smaller rtnResearch" data-role="none" Data-ajax="false">Return to Research Topics</a>
+					</li>
+				</ul>
+			</nav>
+		<!-- Start of navbar -->
+			<section data-role="none" data-position="fixed" data-id="index">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="index.html" class="navbar" Data-ajax="false">Home</a></li>
+						<li><a href="#error404" class="device navbar" Data-ajax="false">Device Info</a></li>
+					</ul>
+				</nav>
+			</section>
+		<!-- End of navbar -->
+		</section>
+	<!-- End of week1 -->
+	
+	<!-- Start of week2 -->
+		<section data-role="page" id="week2">
+			<header>
+				<h1>Elijah Freestone</h1>
+					<h2>Project 2 Android</h2>
+						<h3>AVF 1304</h3>
+			</header>
+			
+			<p id="week1Title">Week 2 Research Topic</p>
+			
+			<p>Week 2 Research will go here</p>
+			
+			<nav>
+				<ul>
+					<li>
+					<a href="#" class="button smaller rtnResearch" data-role="none" Data-ajax="false">Return to Research Topics</a>
+					</li>
+				</ul>
+			</nav>
+		<!-- Start of navbar -->
+			<section data-role="none" data-position="fixed" data-id="index">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="index.html" class="navbar" Data-ajax="false">Home</a></li>
+						<li><a href="#error404" class="device navbar" Data-ajax="false">Device Info</a></li>
+					</ul>
+				</nav>
+			</section>
+		<!-- End of navbar -->
+		</section>
+	<!-- End of week2 -->
+
+	<!-- Start of week3 -->
+		<section data-role="page" id="week3">
+			<header>
+				<h1>Elijah Freestone</h1>
+					<h2>Project 2 Android</h2>
+						<h3>AVF 1304</h3>
+			</header>
+			
+			<p id="week1Title">Week 3 Research Topic</p>
+			
+			<p>Week 3 Research will go here</p>
+			
+			<nav>
+				<ul>
+					<li>
+					<a href="#" class="button smaller rtnResearch" data-role="none" Data-ajax="false">Return to Research Topics</a>
+					</li>
+				</ul>
+			</nav>
+		<!-- Start of navbar -->
+			<section data-role="none" data-position="fixed" data-id="index">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="index.html" class="navbar" Data-ajax="false">Home</a></li>
+						<li><a href="#error404" class="device navbar" Data-ajax="false">Device Info</a></li>
+					</ul>
+				</nav>
+			</section>
+		<!-- End of navbar -->
+		</section>
+	<!-- End of week3 -->
+
+	<!-- Start of week4 -->
+		<section data-role="page" id="week4">
+			<header>
+				<h1>Elijah Freestone</h1>
+					<h2>Project 2 Android</h2>
+						<h3>AVF 1304</h3>
+			</header>
+			
+			<p id="week1Title">Week 4 Research Topic</p>
+			
+			<p>Week 4 Research will go here</p>
+			
+			<nav>
+				<ul>
+					<li>
+					<a href="#" class="button smaller rtnResearch" data-role="none" Data-ajax="false">Return to Research Topics</a>
+					</li>
+				</ul>
+			</nav>
+		<!-- Start of navbar -->
+			<section data-role="none" data-position="fixed" data-id="index">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="index.html" class="navbar" Data-ajax="false">Home</a></li>
+						<li><a href="#error404" class="device navbar" Data-ajax="false">Device Info</a></li>
+					</ul>
+				</nav>
+			</section>
+		<!-- End of navbar -->
+		</section>
+	<!-- End of week4 -->
 	
 	<!-- Start of error404 -->
 		<section data-role="page" id="error404">
@@ -169,7 +352,9 @@
 			
 			<nav>
 				<ul>
-					<li><a href="index.html" id="home" class="button" data-role="none" Data-ajax="false">Click here to return home</a></li>
+					<li>
+					<a href="index.html" id="home" class="button smaller" data-role="none" Data-ajax="false">Click here to return home</a>
+					</li>
 				</ul>
 			</nav>
 		<!-- Start of navbar -->
@@ -177,7 +362,7 @@
 				<nav data-role="navbar">
 					<ul>
 						<li><a href="index.html" Data-ajax="false">Home</a></li>
-						<li><a href="#error404" class="device" Data-ajax="false">Device Info</a></li>
+						<li><a href="#" class="device error" Data-ajax="false">Device Info</a></li>
 					</ul>
 				</nav>
 			</section>

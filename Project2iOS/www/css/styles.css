@@ -56,9 +56,8 @@ body {
 	color: #f3f3f3;
 }
 
-a.navbar { /* apply color to hide underline of navbar text */
-	color: #3b3b3b;
-	margin: 50px;
+a { /* remove underline from all <a> tags (buttons) */
+	text-decoration: none;
 }
 
 /* Portrait layout (default) */
@@ -102,10 +101,9 @@ h3 {
 	margin-top: -8px;
 }
 
-p { /* error404 message */
-	font-size: 16px;
+p { /* error404 message and research topics */
+	font-size: 20px;
 	font-weight: normal;
-	font-family: "Helvetica", "Arial", sans-serif;
     overflow:visible;
     text-align:center;
     background-color: #f3f3f3;
@@ -121,9 +119,8 @@ p { /* error404 message */
 }
 
 p#title { /*page titles */
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: normal;
-	font-family: "Helvetica", "Arial", sans-serif;
     overflow:visible;
     text-align:center;
     background-color: #f3f3f3;
@@ -199,7 +196,7 @@ li>a.button { /* native and api buttons */
     background: -webkit-gradient(linear, left top, left bottom, from(#29abe2), to(#0071bc));
     background: -moz-linear-gradient(top, #29abe2, #0071bc);
     color: #f3f3f3;
-    font-size: 24px;
+    font-size: 30px;
     padding: 10px 20%;
     -webkit-border-radius: 10px;
     border-radius: 10px;
@@ -217,7 +214,7 @@ a.button:active { /* Active state of all blue buttons */
 	background: -webkit-gradient(linear, left top, left bottom, from(#37c2ff), to(#0388e1));
 }
 
-li>a.button#home { /* override for return home button on error404 to keep text on 1 line */
-	font-size: 20px;
+li>a.button.smaller { /* override for return home button on error404 and research buttons to keep text on 1 line */
+	font-size: 26px;
 	padding: 10px;
 }

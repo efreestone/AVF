@@ -76,5 +76,5 @@ $("#error404").on("pageinit", function() {
 //global function for device info (on "native" and in nav bar
 $(".device").on("click", function() {
 	//device function will go here
-	alert("device clicked");
+	//alert("device clicked");
 });

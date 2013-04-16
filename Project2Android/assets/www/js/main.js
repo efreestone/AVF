@@ -66,9 +66,34 @@ $("#native").on("pageinit", function() {
 }); //End of native pageinit
 
 $("#research").on("pageinit", function() {
-	//Code needed for research goes here
+	//week 1 changePage
+	$("#week1Btn").on("click", function() {
+		$.mobile.changePage($("#week1"));
+	});
+	//week 2 changePage
+	$("#week2Btn").on("click", function() {
+		$.mobile.changePage($("#week2"));
+	});
+	//week 3 changePage
+	$("#week3Btn").on("click", function() {
+		$.mobile.changePage($("#week3"));
+	});
+	//week 4 changePage
+	$("#week4Btn").on("click", function() {
+		$.mobile.changePage($("#week4"));
+	});
 }); //End of research pageinit
 
 $("#error404").on("pageinit", function() {
 	//Code needed for error404 goes here
 }); //End of error404 pageinit
+
+//Changepage function to error404 for all buttons with class="error"
+$(".error").on("click", function() {
+	$.mobile.changePage($("#error404"));
+});
+
+//changePage function for return to research button on week1-4
+$(".rtnResearch").on("click", function() {
+	$.mobile.changePage($("#research"));
+});
