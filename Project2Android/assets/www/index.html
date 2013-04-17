@@ -73,9 +73,9 @@
 			
 			<nav>
 				<ul>
-					<li><a href="#" id="google" class="button error" data-role="none" Data-ajax="false">Google Search</a></li>
-		
-					<li><a href="#" id="twitter" class="button error" data-role="none" Data-ajax="false">Twitter Search</a></li>
+					<li><a href="#" id="googleBtn" class="button" data-role="none" Data-ajax="false">Google Search</a></li>
+					
+					<li><a href="#" id="twitterBtn" class="button" data-role="none" Data-ajax="false">Twitter Search</a></li>
 				</ul>
 			</nav>
 			
@@ -91,6 +91,66 @@
 		<!-- End of navbar -->
 		</section>
 	<!-- End of api -->
+	
+	<!-- Start of google -->
+		<section data-role="page" id="google">
+			<header>
+				<h1>Elijah Freestone</h1>
+					<h2>Project 2 Android</h2>
+						<h3>AVF 1304</h3>
+			</header>
+			
+			<p id="googleTitle">Google Search</p>
+		<!-- Google search box -->
+			<form>
+				<input type="search" class="search" value="" data-role="none" placeholder="Enter search term"></input>	
+					<a href="#" id="googleSearch" class="button smaller" Data-ajax="false">Search Google</a>
+			</form>
+			
+		<!-- Start of navbar -->
+			<section data-role="none" data-position="fixed" data-id="index">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#" class="home" Data-ajax="false">Home</a></li>
+						<li><a href="#" class="device error" Data-ajax="false">Device Info</a></li>
+					</ul>
+				</nav>
+			</section>
+		<!-- End of navbar -->
+		</section>
+	<!-- End of google -->
+	
+	<!-- Start of twitter -->
+		<section data-role="page" id="twitter">
+			<header>
+				<h1>Elijah Freestone</h1>
+					<h2>Project 2 Android</h2>
+						<h3>AVF 1304</h3>
+			</header>
+			
+			<p id="twitterTitle">Twitter Search</p>
+		<!-- Twitter search box -->
+			<form>
+				<input type="search" class="search" id="twitTerm" value="" data-role="none" placeholder="Enter search term"></input>	
+					<a href="#" id="twitterSearch" class="button smaller" Data-ajax="true">Search Twitter</a>
+			</form>
+		<!-- Section tag to display tweets -->	
+			<section id="twitResults">
+			
+			</section>
+			
+		<!-- Start of navbar -->
+			<section data-role="none" data-position="fixed" data-id="index">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#" class="home" Data-ajax="false">Home</a></li>
+						<li><a href="#" class="device error" Data-ajax="false">Device Info</a></li>
+					</ul>
+				</nav>
+			</section>
+		<!-- End of navbar -->
+		</section>
+	<!-- End of twitter -->
 	
 	<!-- Start of native -->
 		<section data-role="page" id="native">

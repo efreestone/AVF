@@ -101,7 +101,7 @@
 			</header>
 			
 			<p id="googleTitle">Google Search</p>
-			
+		<!-- Google search box -->
 			<form>
 				<input type="search" class="search" value="" data-role="none" placeholder="Enter search term"></input>	
 					<a href="#" id="googleSearch" class="button smaller" Data-ajax="false">Search Google</a>
@@ -129,11 +129,15 @@
 			</header>
 			
 			<p id="twitterTitle">Twitter Search</p>
-		
+		<!-- Twitter search box -->
 			<form>
-				<input type="search" class="search" value="" data-role="none" placeholder="Enter search term"></input>	
-					<a href="#" id="twitterSearch" class="button smaller" Data-ajax="false">Search Twitter</a>
+				<input type="search" class="search" id="twitTerm" value="" data-role="none" placeholder="Enter search term"></input>	
+					<a href="#" id="twitterSearch" class="button smaller" Data-ajax="true">Search Twitter</a>
 			</form>
+		<!-- Section tag to display tweets -->	
+			<section id="twitResults">
+			
+			</section>
 			
 		<!-- Start of navbar -->
 			<section data-role="none" data-position="fixed" data-id="index">

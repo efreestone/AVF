@@ -76,7 +76,38 @@ $("#google").on("pageinit", function() {
 }); //End of google pageinit
 
 $("#twitter").on("pageinit", function() {
-	//Code needed for twitter goes here
+	//Twitter search API function
+	$("#twitterSearch").on("click", function() {
+		$("#twitResults").html("");
+		var twitTerm = $("#twitTerm").val();
+			console.log($("#twitTerm").val());
+		$("#twitResults").empty(); 
+
+		
+		$.ajax({
+			type: "GET'",
+			dataType: "jsonp",
+			url: "http://search.twitter.com/search.json?",
+			data:{q: twitTerm},
+			success: function(data){
+			console.log(data);
+				$.each(data.results, function(){
+					$("#twitResults").append($("<div>")
+							.attr("class", "results")
+                            .append($("<h1>" + "Username: " + "@" + this.from_user + "</h1>")
+                            .attr("class", "user"))
+                            .append($("<img src=" + this.profile_image_url + ">"))
+                            .append($("<h2>" + this.from_user_name + "</h2>"))
+                            .append($("<h3>" + this.text + "</h3>")
+                            .attr("class", "tweet"))
+                            .append($("<h4>" + this.created_at + "</h4>")
+                            .attr("class", "time"))
+                    );
+					
+				});
+			}
+		});
+	});
 }); //End of twitter pageinit
 
 $("#native").on("pageinit", function() {
