@@ -263,9 +263,10 @@ input.search {
     background-color: #f3f3f3;
 }
 
-div.results { /* error404 message and research topics */
+div.results { /* facebook and twitter results */
 	font-size: 20px;
 	font-weight: normal;
+	font-family: "Helvetica", "Arial", sans-serif;
     overflow:visible;
     text-align:center;
     background-color: #f3f3f3;
