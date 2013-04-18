@@ -122,7 +122,8 @@ $("#twitter").on("pageinit", function() {
 			$.ajax({
 				type: "GET",
 				dataType: "json",
-				url: "http://search.twitter.com/search.json?",
+				//jsonp: "jsoncallback",
+				url: "http://search.twitter.com/search.json?callback=?&q=" + twitTerm,
 				data:{q: twitTerm},
 				success: function(data) {
 					console.log(data);
