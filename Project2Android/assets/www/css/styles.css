@@ -78,10 +78,11 @@ h1 {
     font-weight:normal;
 }
 
-h1.user { /* Override to adjust position and apply bold */
+h1.user { /* Override to adjust position of @username */
 	font-size: 20px;
 	-webkit-margin-before: -.25em;
 	-webkit-margin-after: -.25em;
+	margin: -.25em;
 }
 
 h2 {
@@ -112,12 +113,12 @@ h4 { /* date and time in tweets */
 	color: #0404d5;
 }
 
-img {
+img { /* user profile pictures */
 	margin: 10px;
 }
 
 p { /* error404 message and research topics */
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: normal;
 	font-family: "Helvetica", "Arial", sans-serif;
     overflow:visible;
@@ -136,7 +137,7 @@ p { /* error404 message and research topics */
 }
 
 p#title { /*page titles */
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: normal;
 	font-family: "Helvetica", "Arial", sans-serif;
     overflow:visible;
@@ -245,7 +246,7 @@ input.search {
 	-webkit-appearance: none;
 	width: 90%;
     height: 40px;
-    border: 1px solid #aaaaaa;
+    border: 2px solid #29abe2;
     padding: 5px;
     font-family: "Helvetica", "Arial", sans-serif;
     font-size: 20px;

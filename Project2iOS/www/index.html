@@ -73,7 +73,7 @@
 			
 			<nav>
 				<ul>
-					<li><a href="#" id="googleBtn" class="button" data-role="none" Data-ajax="false">Google Search</a></li>
+					<li><a href="#" id="facebookBtn" class="button" data-role="none" Data-ajax="false">Facebook Search</a></li>
 					
 					<li><a href="#" id="twitterBtn" class="button" data-role="none" Data-ajax="false">Twitter Search</a></li>
 				</ul>
@@ -92,20 +92,30 @@
 		</section>
 	<!-- End of api -->
 	
-	<!-- Start of google -->
-		<section data-role="page" id="google">
+	<!-- Start of facebook -->
+		<section data-role="page" id="facebook">
 			<header>
 				<h1>Elijah Freestone</h1>
 					<h2>Project 2 iOS</h2>
 						<h3>AVF 1304</h3>
 			</header>
 			
-			<p id="googleTitle">Google Search</p>
-		<!-- Google search box -->
+			<p id="facebookTitle">Facebook Search</p>
+		<!-- Facebook search box -->
 			<form>
-				<input type="search" class="search" value="" data-role="none" placeholder="Enter search term"></input>	
-					<a href="#" id="googleSearch" class="button smaller" Data-ajax="false">Search Google</a>
+				<input type="search" class="search" id="fbTerm" value="" data-role="none" placeholder="Enter search term"></input>	
+					<a href="#" id="facebookSearch" class="button smaller" Data-ajax="false">Search Facebook</a>
 			</form>
+		<!-- Section tag to display search results -->	
+			<section id="fbResults">
+				<p>Your search results will appear here</p>
+			</section>
+			
+			<nav>
+				<ul>
+					<li><a href="#api" class="button smaller" data-role="none" Data-ajax="false">Return to Data APIs</a></li>
+				</ul>
+			</nav>
 			
 		<!-- Start of navbar -->
 			<section data-role="none" data-position="fixed" data-id="index">
@@ -118,7 +128,7 @@
 			</section>
 		<!-- End of navbar -->
 		</section>
-	<!-- End of google -->
+	<!-- End of facebook -->
 	
 	<!-- Start of twitter -->
 		<section data-role="page" id="twitter">
@@ -136,8 +146,15 @@
 			</form>
 		<!-- Section tag to display tweets -->	
 			<section id="twitResults">
-			
+				<p>Your search results will appear here</p>
+				
 			</section>
+			
+			<nav>
+				<ul>
+					<li><a href="#api" class="button smaller" data-role="none" Data-ajax="false">Return to Data APIs</a></li>
+				</ul>
+			</nav>
 			
 		<!-- Start of navbar -->
 			<section data-role="none" data-position="fixed" data-id="index">

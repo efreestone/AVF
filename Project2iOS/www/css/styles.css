@@ -82,6 +82,7 @@ h1.user { /* Override to adjust position and apply bold */
 	font-size: 20px;
 	-webkit-margin-before: -.25em;
 	-webkit-margin-after: -.25em;
+	margin: -.25em;
 }
 
 h2 {
@@ -109,10 +110,11 @@ h4 { /* date and time in tweets */
 	font-weight: normal;
 	margin-top: -8px;
 	-webkit-margin-after: 0em;
+	margin: 0em;
 	color: #0404d5;
 }
 
-img {
+img { /* user profile pictures */
 	margin: 10px;
 }
 
@@ -238,7 +240,7 @@ input.search {
 	-webkit-appearance: none;
 	width: 90%;
     height: 40px;
-    border: 1px solid #aaaaaa;
+    border: 2px solid #29abe2;
     padding: 5px;
     font-family: "Helvetica", "Arial", sans-serif;
     font-size: 20px;
