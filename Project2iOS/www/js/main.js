@@ -98,8 +98,7 @@ $("#facebook").on("pageinit", function() {
                             .append($("<h2>" + "ID #: " + this.from.id + "</h2>"))
                             .append($("<h3>" + this.message + "</h3>")
                             .attr("class", "tweet"))
-                            .append($("<h4>" + this.created_time + "</h4>")
-                            .attr("class", "time"))
+                            .append($("<h4>" + this.created_time + "</h4>"))
                         );
                     });
                 }
@@ -135,8 +134,7 @@ $("#twitter").on("pageinit", function() {
                             .append($("<h2>" + this.from_user_name + "</h2>"))
                             .append($("<h3>" + this.text + "</h3>")
                             .attr("class", "tweet"))
-                            .append($("<h4>" + this.created_at + "</h4>")
-                            .attr("class", "time"))
+                            .append($("<h4>" + this.created_at + "</h4>"))
                         );
                     });
 				}
