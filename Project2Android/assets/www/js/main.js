@@ -120,7 +120,7 @@ $("#twitter").on("pageinit", function() {
 			$("#twitResults").empty(); 
 			$.ajax({
 				type: "GET",
-				dataType: "jsonp",
+				dataType: "jsonp", //this was set to json in my phone demo. Works in emulator as jsonp though.
 				//jsonp: "jsoncallback",
 				url: "http://search.twitter.com/search.json?",
 				data:{q: twitTerm},
