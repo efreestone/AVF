@@ -225,6 +225,12 @@ a.button.smaller { /* override for return home button on error404 and research b
 	padding: 10px;
 }
 
+label.hidden { /* hide form labels without hiding from screen readers*/
+	position: absolute !important;
+	top: -9999px !important;
+	left: -9999px !important;
+}
+
 input.search {
 	-webkit-appearance: none;
 	width: 90%;
