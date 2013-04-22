@@ -49,6 +49,10 @@ a { /* remove underline from all <a> tags (buttons) */
 	text-decoration: none;
 }
 
+a.link { /* Add underline for links to external pages */
+	text-decoration: underline;
+}
+
 /* Portrait layout (default) */
 .app {
     background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
