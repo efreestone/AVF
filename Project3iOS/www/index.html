@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+	<!-- Elijah Freestone -->
+	<!-- AVF 1304 -->
+	<!-- Project 3 iOS -->
+	<!-- 4-20-13 -->
+	
+<html lang="en">
+	<head>
+	
+		<meta charset="utf-8">
+		
+		<title>Project 3 iOS</title>
+		
+		<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- Mobile IE needs ClearType for smoothing fonts -->
+		<meta http-equiv="cleartype" content="on">
+		
+		<!-- StyleSheets under here -->
+		<!--<link rel="stylesheet" href="css/jquery.mobile-1.2.0.css" />-->
+		<link rel="stylesheet" href="css/jquery.mobile.structure-1.3.1.min.css" />
+		<link rel="stylesheet" href="css/styles.css" type="text/css" />
+		
+		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+		<script src="js/libs/modernizr.custom.min.js"></script>
+	
+	</head>
+	
+    <body>
+    <!-- Start of index -->
+		<section data-role="page" id="index">
+			<header>
+				<h1>Elijah Freestone</h1>
+					<h2>Project 3 iOS</h2>
+						<h3>AVF 1304</h3>
+			</header>
+			
+			<nav>
+				<ul>
+					<li><a href="#" id="seeAPI" class="button" data-role="none" Data-ajax="true">Data APIs</a></li>
+	
+					<li><a href="#" id="seeNative" class="button" data-role="none" Data-ajax="true">Native Features</a></li>
+			
+					<li><a href="#" id="seeResearch" class="button" data-role="none" Data-ajax="true">Research Topics</a></li>
+				</ul>
+			</nav>
+
+		<!-- Start of navbar -->
+			<section data-role="none" data-position="fixed" data-id="index">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#" class="home" Data-ajax="false">Home</a></li>
+						<li><a href="#error404" class="device navbar" Data-ajax="false">Device Info</a></li>
+					</ul>
+				</nav>
+			</section>
+		<!-- End of navbar -->
+		</section>
+	<!-- End of index -->
+	
+	<!-- Start of api -->
+		<section data-role="page" id="api">
+			<header>
+				<h1>Elijah Freestone</h1>
+					<h2>Project 3 iOS</h2>
+						<h3>AVF 1304</h3>
+			</header>
+			
+			<p id="apiTitle">Data APIs</p>
+			
+			<nav>
+				<ul>
+					<li><a href="#" id="facebookBtn" class="button" data-role="none" Data-ajax="false">Facebook Search</a></li>
+					
+					<li><a href="#" id="twitterBtn" class="button" data-role="none" Data-ajax="false">Twitter Search</a></li>
+				</ul>
+			</nav>
+			
+		<!-- Start of navbar -->
+			<section data-role="none" data-position="fixed" data-id="index">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#" class="home" Data-ajax="false">Home</a></li>
+						<li><a href="#error404" class="device navbar" Data-ajax="false">Device Info</a></li>
+					</ul>
+				</nav>
+			</section>
+		<!-- End of navbar -->
+		</section>
+	<!-- End of api -->
+	
+	<!-- Start of facebook -->
+		<section data-role="page" id="facebook">
+			<header>
+				<h1>Elijah Freestone</h1>
+					<h2>Project 3 iOS</h2>
+						<h3>AVF 1304</h3>
+			</header>
+			
+			<p id="facebookTitle">Facebook Search</p>
+		<!-- Facebook search box -->
+			<form>
+				<label for="fbTerm" class="hidden">Facebook Search</label>
+				<input type="search" class="search" id="fbTerm" value="" data-role="none" placeholder="Enter search term">
+					<a href="#" id="facebookSearch" class="button smaller" Data-ajax="false">Search Facebook</a>
+			</form>
+		<!-- Section tag to display search results -->	
+			<section id="fbResults">
+				<p>Your search results will appear here</p>
+			</section>
+			
+			<nav>
+				<ul>
+					<li><a href="#api" class="button smaller" data-role="none" Data-ajax="false">Return to Data APIs</a></li>
+				</ul>
+			</nav>
+			
+		<!-- Start of navbar -->
+			<section data-role="none" data-position="fixed" data-id="index">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#" class="home" Data-ajax="false">Home</a></li>
+						<li><a href="#error404" class="device navbar" Data-ajax="false">Device Info</a></li>
+					</ul>
+				</nav>
+			</section>
+		<!-- End of navbar -->
+		</section>
+	<!-- End of facebook -->
+	
+	<!-- Start of twitter -->
+		<section data-role="page" id="twitter">
+			<header>
+				<h1>Elijah Freestone</h1>
+					<h2>Project 3 iOS</h2>
+						<h3>AVF 1304</h3>
+			</header>
+			
+			<p id="twitterTitle">Twitter Search</p>
+		<!-- Twitter search box -->
+			<form>
+				<label for="twitTerm" class="hidden">Twitter Search</label>
+				<input type="search" class="search" id="twitTerm" value="" data-role="none" placeholder="Enter search term">	
+					<a href="#" id="twitterSearch" class="button smaller" Data-ajax="true">Search Twitter</a>
+			</form>
+		<!-- Section tag to display tweets -->	
+			<section id="twitResults">
+				<p>Your search results will appear here</p>
+				
+			</section>
+			
+			<nav>
+				<ul>
+					<li><a href="#api" class="button smaller" data-role="none" Data-ajax="false">Return to Data APIs</a></li>
+				</ul>
+			</nav>
+			
+		<!-- Start of navbar -->
+			<section data-role="none" data-position="fixed" data-id="index">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#" class="home" Data-ajax="false">Home</a></li>
+						<li><a href="#error404" class="device navbar" Data-ajax="false">Device Info</a></li>
+					</ul>
+				</nav>
+			</section>
+		<!-- End of navbar -->
+		</section>
+	<!-- End of twitter -->
+	
+	<!-- Start of native -->
+		<section data-role="page" id="native">
+			<header>
+				<h1>Elijah Freestone</h1>
+					<h2>Project 3 iOS</h2>
+						<h3>AVF 1304</h3>
+			</header>
+			
+			<p id="nativeTitle">Native Features</p>
+			
+			<nav>
+				<ul>
+					<li><a href="#error404" id="camera" class="button" data-role="none" Data-ajax="false">Camera</a></li>
+			
+					<li><a href="#error404" id="contacts" class="button" data-role="none" Data-ajax="false">Contacts</a></li>
+			
+					<li><a href="#error404" class="device button" data-role="none" Data-ajax="false">Device Info</a></li>
+			
+					<li><a href="#error404" id="geoloc" class="button" data-role="none" Data-ajax="false">Geolocation</a></li>
+			
+					<li><a href="#error404" id="mic" class="button" data-role="none" Data-ajax="false">Microphone</a></li>
+				</ul>
+			</nav>
+			
+		<!-- Start of navbar -->
+			<section data-role="none" data-position="fixed" data-id="index">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#" class="home" Data-ajax="false">Home</a></li>
+						<li><a href="#error404" class="device navbar" Data-ajax="false">Device Info</a></li>
+					</ul>
+				</nav>
+			</section>
+		<!-- End of navbar -->
+		</section>
+	<!-- End of native -->
+	
+	<!-- Start of research -->
+		<section data-role="page" id="research">
+			<header>
+				<h1>Elijah Freestone</h1>
+					<h2>Project 3 iOS</h2>
+						<h3>AVF 1304</h3>
+			</header>
+			
+			<p id="researchTitle">Research Topics</p>
+			
+			<nav>
+				<ul>
+					<li><a href="#week1" class="button" data-role="none" Data-ajax="false">Week 1</a></li>
+				
+					<li><a href="#week2" class="button" data-role="none" Data-ajax="false">Week 2</a></li>
+					
+					<li><a href="#week3" class="button" data-role="none" Data-ajax="false">Week 3</a></li>
+					
+					<li><a href="#week4" class="button" data-role="none" Data-ajax="false">Week 4</a></li>
+				</ul>
+			</nav>
+			
+		<!-- Start of navbar -->
+			<section data-role="none" data-position="fixed" data-id="index">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#" class="home" Data-ajax="false">Home</a></li>
+						<li><a href="#error404" class="device navbar" Data-ajax="false">Device Info</a></li>
+					</ul>
+				</nav>
+			</section>
+		<!-- End of navbar -->
+		</section>
+	<!-- End of research -->
+	
+	<!-- Start of week1 -->
+		<section data-role="page" id="week1">
+			<header>
+				<h1>Elijah Freestone</h1>
+					<h2>Project 3 iOS</h2>
+						<h3>AVF 1304</h3>
+			</header>
+			
+			<p id="week1Title">Week 1 Research Topic</p>
+			
+			<p>Q1: Less obvious perks of using 'live' data resources include logins and payments. How could Twitter be used in these two
+			scenarios?</p>
+			
+			<p>A1: "Sign in with Twitter" is based on a feature called "OAuth" that opens up authentication and authorization for the app to
+			use the API on the users behalf, all while the user never has to give their password to any third party application. This
+			security feature opens up a lot of different possibilities for integration. I believe there are a few different options for
+			payment with Twitter as well. The one I know of is "Amex Sync". This allows a user to tweet special hash tags and receive special
+			deals and discounts on products using their registered American Express card. The transaction is completed over twitter with more
+			special hash tags. When you tweet the first tag, the system sends you a unique tag to tweet in order to complete the transaction.
+			Although this isn't directly integrated into the Twitter API, its still very secure because the users card info is protected on
+			Amex's servers so their info is never out in the open. OAuth helps to close any other cracks in security for the transaction and
+			doesn't even allow Amex Sync access to any of the users info that isn't public. One thing I wasn't able to find much info on is
+			how vendors join in. Sync is also available for Facebook and Foursquare but I believe you just get coupons from them and can only
+			make purchases via Twitter as of now. I wasn't able to find any other similar services either, but I wouldn't be surprised to see
+			other Credit Card companies jump on the bandwagon if Sync does well. I don't think it would be extremely difficult to create a
+			mashup of Twitter and a payment API such as Paypal either.</p>
+			
+			<p>Q2: Visit Programmableweb.com and search for JSON-P data sources. Why would we need JSON-P, specifically?</p>
+			
+			<p>A2: We would need JSON-P specifically because it is one of the easiest ways for cross-domain communication. This opens up
+			doors for all kinds of different mashups.</p>
+			
+			<p>Q3: Based on the JSON-P search results: what data resource(s) do you think might pair well with which types of Native device
+			features?</p>
+			
+			<p>A3: One of the first resources that jumps out to me would be the Google Maps API paired with the Native Geolocation feature.
+			This is one of the features I will be demoing this month, however I am not sure if I will use the Google API as of yet. There are
+			several other map APIs available so I will be research them first as one may better suit my needs.</p>
+			
+			<p>Q4: Please describe any design and functionality intentions you may have for your Demo app components this month.</p>
+			
+			<p>A4: I am looking to build a wish list/gift idea app and this months demo app will be the core features of it. One of the main
+			features would be to allow the user to take pictures of an item they want or they think would be a good gift for another person
+			and share it with their contacts, on Twitter, or on Facebook. The image would contain geolocation to keep track of where the
+			image was taken, possibly with some sort of map integration and the ability to add captions to the post or notes (or a voice
+			recording) about the item that wouldn't be visible on the image post. In the future, I also hope to add the ability to shop for a
+			specific item via Google Shopping or Amazon from within the app. One thing I think would really help the shopping portion would
+			be bar code and QR code reading so the user can just snap a picture of the code and get the price of the item from several
+			retailers.</p>
+			
+			<p>Q5: Briefly describe some past 'lessons learned' regarding workflow as it relates to research, design, development, etc.</p>
+			
+			<p>A5: One lesson I've learned is to always have a game plan before really diving in. If you know the basics about what you need,
+			you can plan the workflow much better and avoid having to go back to research once you?ve moved on to the design phase. There
+			have been a few times where I had to do this and it can really wreak havoc on your workflow, especially if you?re the type of
+			person that has to be in a particular ?mode? for the individual parts like me. </p>
+			
+			<nav>
+				<ul>
+					<li><a href="#research" class="button smaller" data-role="none" Data-ajax="false">Return to Research Topics</a></li>
+				</ul>
+			</nav>
+		<!-- Start of navbar -->
+			<section data-role="none" data-position="fixed" data-id="index">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#" class="home" Data-ajax="false">Home</a></li>
+						<li><a href="#error404" class="device navbar" Data-ajax="false">Device Info</a></li>
+					</ul>
+				</nav>
+			</section>
+		<!-- End of navbar -->
+		</section>
+	<!-- End of week1 -->
+	
+	<!-- Start of week2 -->
+		<section data-role="page" id="week2">
+			<header>
+				<h1>Elijah Freestone</h1>
+					<h2>Project 3 iOS</h2>
+						<h3>AVF 1304</h3>
+			</header>
+			
+			<p id="week2Title">Week 2 Research Topic</p>
+			
+			<p>Q1: What are some of the ways that you could change your HTML on your Demo app to be more accessible? (Remember, you can use
+			the Section tag with jQuery, for instance)</p>
+			
+			<p>A1: After doing some reading on screen readers and accessibility, it became very apparent that semantic markup is extremely
+			important. One thing I can do (beyond being extra careful with meaningful markup) is to ensure everything is properly labeled.
+			After running one of my gh-pages from project 2 in the accessibility validator at 
+			<a class="link" href="http://wave.webaim.org/">wave.webaim.org</a> (only validates web addresses, no text option), the majority of
+			errors were related to labeling. There are probably different sections of my app that a different tag would be more appropriate as
+			well. There is an extensive list of accessibility tools at 
+			<a class="link" href="http://www.w3.org/WAI/RC/tools/complete">w3.org/WAI/RC/tools/complete</a> that should come in handing for
+			writing more accessible markup.</p>
+			
+			<p>Q2: Visit a video service on the web (like YouTube) and search for "Screen Reader Demo" and "Mobile Screen Reader" - what are
+			some of the common frustrations (or common support mechanisms) that you see among the examples that are given - how could you fix
+			them (or use them)?</p>
+			
+			<p>A2: The top frustration with screen readers and surfing the web is poor markup by far. One video I watched was showing the how
+			the accessible version of <em>Amazon.com</em> compared to the regular version. The difference was absolutely huge! The standard
+			version is basically unusable with a screen reader. Meaningful and semantic markup makes a big difference when it comes to
+			accessibility. 
+			<br></br>
+			I think the largest frustration when it comes to using accessibility software is poor layout and extremely different layouts
+			between different brands. Features such as shortcuts should be easy to find but some screen readers have them buried under far
+			less important features. Having an extremely simple and intuitive layout seems like it should be a given for accessibility
+			software, but unfortunately it isn't.
+			<br></br>
+			Although it only came up in one review, I think the unnatural speech of most screen readers could be troublesome, especially for
+			someone who has just recently lost their vision. Making the voice as natural as possible could make a huge difference.</p>
+			
+			<p>Q3: Devices: Please list two devices (and some of their features) that are made specifically to support Accessibility.</p>
+			
+			<p>A3: Daisy Players such as the <em>Plextalk PTN2</em> are audio playback devices for reading books with the Daisy Reader
+			software. Some of the features for most Daisy Players are text-to-speech or narration of books, large tactile buttons with voice
+			navigation, a built in speaker and headphone jack. Some even include braille note taking and speech recognition.
+			<br></br>
+			Refreshable Braille Displays such as the <em>Focus Blue 40,</em> are another device specifically made for accessibility. They
+			typically connect to a computer with usb or Bluetooth. The display consists of small pins that come up from a flat and smooth
+			surface to create the Braille words for the user. Many of them include various hot keys for volume and navigation as well. </p>
+			
+			<p>Q4: Mobile Apps: Please list two apps (either Android or iOS, or both) that are made specifically to support Accessibility.</p>
+			
+			<p>A4: <em>Mobile Speak</em> by Code Factory is a screen reader that is available for Symbian, Windows Mobile, and Android. It is
+			also included in the <em>Mobile Accessibility Suite</em> that comes with several different apps such as calendar, alarm, braille
+			conversion and a gps location feature, among others.
+			<br></br>
+			<em>Google TalkBack</em> is an accessibility service for Android devices that adds spoken, audible and vibration feedback to a
+			device in order to aid navigation. It is pre-installed on most Android devices but can also be added.</p>
+			
+			<nav>
+				<ul>
+					<li><a href="#research" class="button smaller" data-role="none" Data-ajax="false">Return to Research Topics</a></li>
+				</ul>
+			</nav>
+		<!-- Start of navbar -->
+			<section data-role="none" data-position="fixed" data-id="index">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#" class="home" Data-ajax="false">Home</a></li>
+						<li><a href="#error404" class="device navbar" Data-ajax="false">Device Info</a></li>
+					</ul>
+				</nav>
+			</section>
+		<!-- End of navbar -->
+		</section>
+	<!-- End of week2 -->
+
+	<!-- Start of week3 -->
+		<section data-role="page" id="week3">
+			<header>
+				<h1>Elijah Freestone</h1>
+					<h2>Project 3 iOS</h2>
+						<h3>AVF 1304</h3>
+			</header>
+			
+			<p id="week3Title">Week 3 Research Topic</p>
+			
+			<p>Week 3 Research will go here</p>
+			
+			<nav>
+				<ul>
+					<li><a href="#research" class="button smaller" data-role="none" Data-ajax="false">Return to Research Topics</a></li>
+				</ul>
+			</nav>
+		<!-- Start of navbar -->
+			<section data-role="none" data-position="fixed" data-id="index">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#" class="home" Data-ajax="false">Home</a></li>
+						<li><a href="#error404" class="device navbar" Data-ajax="false">Device Info</a></li>
+					</ul>
+				</nav>
+			</section>
+		<!-- End of navbar -->
+		</section>
+	<!-- End of week3 -->
+
+	<!-- Start of week4 -->
+		<section data-role="page" id="week4">
+			<header>
+				<h1>Elijah Freestone</h1>
+					<h2>Project 3 iOS</h2>
+						<h3>AVF 1304</h3>
+			</header>
+			
+			<p id="week4Title">Week 4 Research Topic</p>
+			
+			<p>Week 4 Research will go here</p>
+			
+			<nav>
+				<ul>
+					<li><a href="#research" class="button smaller" data-role="none" Data-ajax="false">Return to Research Topics</a></li>
+				</ul>
+			</nav>
+		<!-- Start of navbar -->
+			<section data-role="none" data-position="fixed" data-id="index">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#" class="home" Data-ajax="false">Home</a></li>
+						<li><a href="#error404" class="device navbar" Data-ajax="false">Device Info</a></li>
+					</ul>
+				</nav>
+			</section>
+		<!-- End of navbar -->
+		</section>
+	<!-- End of week4 -->
+	
+	<!-- Start of error404 -->
+		<section data-role="page" id="error404">
+			<header>
+				<h1>Elijah Freestone</h1>
+					<h2>Project 3 iOS</h2>
+						<h3>AVF 1304</h3>
+			</header>
+			
+			<p id="errorTitle">Error 404</p>
+			
+			<p>We're sorry. You appear to have found a page that is under construction or no longer exists.</p>
+			
+			<nav>
+				<ul>
+					<li>
+						<a href="#" class="button smaller home" data-role="none" Data-ajax="false">Click here to return home</a>
+					</li>
+				</ul>
+			</nav>
+		<!-- Start of navbar -->
+			<section data-role="none" data-position="fixed" data-id="index">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#" class="home" Data-ajax="false">Home</a></li>
+						<li><a href="#error404" class="device navbar" Data-ajax="false">Device Info</a></li>
+					</ul>
+				</nav>
+			</section>
+		<!-- End of navbar -->
+		</section>
+	<!-- End of error404 -->
+	
+		
+        
+        
+    	
+        
+    <!-- JavaScript under here -->
+    <script type="text/javascript" src="js/libs/jquery-1.8.3.js"></script>
+    <!--<script type="text/javascript" src="js/libs/jquery.mobile-1.2.0.js"></script>-->
+    <script type="text/javascript" src="js/libs/jquery.mobile-1.3.1.min.js"></script>
+    <script type="text/javascript" src="cordova-2.5.0.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+    </body>
+</html>
