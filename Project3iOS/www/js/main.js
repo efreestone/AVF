@@ -144,7 +144,27 @@ $("#twitter").on("pageinit", function() {
 }); //End of twitter pageinit
 
 $("#native").on("pageinit", function() {
-	//Code needed for native goes here
+	
+	//Changepage function for camera button
+	$("#camera").on("click", function() {
+		$.mobile.changePage($("#cameraPage"));
+	});
+
+	//Changepage function for contacts button
+	$("#contacts").on("click", function() {
+		$.mobile.changePage($("#contactsPage"));
+	});
+	
+	//Changepage function for geolocation button
+	$("#geoloc").on("click", function() {
+		$.mobile.changePage($("#geoPage"));
+	});
+	
+	//Changepage function for microphone button
+	$("#mic").on("click", function() {
+		$.mobile.changePage($("#micPage"));
+	});
+	
 }); //End of native pageinit
 
 $("#research").on("pageinit", function() {
@@ -157,7 +177,7 @@ $("#error404").on("pageinit", function() {
 
 //Global function for device info on native and in navbar
 $(".device").on("click", function() {
-	//device function will go here
+	$.mobile.changePage($("#deviceInfo"));
 	//alert("device clicked");
 });
 
