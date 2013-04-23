@@ -97,7 +97,7 @@ $("#facebook").on("pageinit", function() {
                             .append($("<img src=css/images/f_logo.jpg>"))
                             .append($("<h2>" + "ID #: " + this.from.id + "</h2>"))
                             .append($("<h3>" + this.message + "</h3>")
-                            .attr("class", "tweet"))
+                            .attr("class", "result"))
                             .append($("<h4>" + this.created_time + "</h4>"))
                         );
                     });
@@ -133,7 +133,7 @@ $("#twitter").on("pageinit", function() {
                             .append($("<img src=" + this.profile_image_url + ">"))
                             .append($("<h2>" + this.from_user_name + "</h2>"))
                             .append($("<h3>" + this.text + "</h3>")
-                            .attr("class", "tweet"))
+                            .attr("class", "result"))
                             .append($("<h4>" + this.created_at + "</h4>"))
                         );
                     });

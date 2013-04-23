@@ -101,11 +101,12 @@ h3 {
 	margin-top: -8px;
 }
 
-h3.tweet { /* Override for tweet content */
+h3.result { /* Override for content of search results */
 	font-size: 22px;
 	font-style: italic;
 	font-weight: bolder;
 	margin-top: 10px;
+	text-align: justify;
 }
 
 h4 { /* date and time in tweets */
