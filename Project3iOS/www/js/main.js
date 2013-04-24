@@ -155,9 +155,10 @@ $("#native").on("pageinit", function() {
 		$.mobile.changePage($("#contactsPage"));
 	});
 	
-	//Changepage function for geolocation button
+	//Geolocation changePage and function call
 	$("#geoloc").on("click", function() {
 		$.mobile.changePage($("#geoPage"));
+		setTimeout(showGeo, 1000);
 	});
 	
 	//Changepage function for microphone button
@@ -178,11 +179,46 @@ $("#error404").on("pageinit", function() {
 //Global function for device info on native and in navbar
 $(".device").on("click", function() {
 	$.mobile.changePage($("#deviceInfo"));
+	setTimeout(showDeviceInfo, 1000);
 	//alert("device clicked");
 });
+
+//Device Info function, fired when "device info" is clicked
+function showDeviceInfo() {
+	var devInfo = document.getElementById("deviceDisplay");
+
+    devInfo.innerHTML = "Device Name: "      + device.name     + "<br/>" + 
+                        "Device Model: "     + device.model    + "<br/>" + 
+                        "Device Platform: "  + device.platform + "<br/>" + 
+                        "Platform Version: " + device.version  + "<br/>" + 
+                        "Device UUID: "      + device.uuid     + "<br/>" +
+                        "Cordova Version: "  + device.cordova  + "<br/>";
+};
 
 //Global changePage function for home button in navbar and on error404
 $(".home").on("click", function() {
 	$.mobile.changePage($("#index"));
 });
+
+//Geolocation function to grab current position
+function showGeo() {
+	var option = {enableHighAccuracy: true};
+    navigator.geolocation.getCurrentPosition(onSuccess, onError, option);
+};
+//onSuccess displays current geolocation
+function onSuccess(position) {
+    var currentGeo = document.getElementById("geolocation");
+    currentGeo.innerHTML = "Latitude: "          + position.coords.latitude         + "<br/>" +
+                           "Longitude: "         + position.coords.longitude        + "<br/>" +
+                           "Accuracy: "          + position.coords.accuracy         + "<br/>" +
+                           "Altitude: "          + position.coords.altitude         + "<br/>" +
+                           "Altitude Accuracy: " + position.coords.altitudeAccuracy + "<br/>" +
+                           "Timestamp: "         + position.timestamp               + "<br/>";
+};
+//onError displays an error if something went wrong (haven't tested this)
+function onError(error) {
+    alert("code: "    + error.code    + "\n" + //\n stands for new line in unix?(similar br tag)
+          "message: " + error.message + "\n");
+};//Geolocation ends here
+
 		
