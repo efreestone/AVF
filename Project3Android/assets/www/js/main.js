@@ -37,7 +37,6 @@ var app = {
     }
 };
 
-
 $("#index").on("pageinit", function() {
 
 	//Changepage function for api button
@@ -54,7 +53,6 @@ $("#index").on("pageinit", function() {
 	$("#seeResearch").on("click", function() {
 		$.mobile.changePage($("#research"));
 	});
-		
 }); //End of index pageinit
 
 $("#api").on("pageinit", function() {
@@ -68,7 +66,6 @@ $("#api").on("pageinit", function() {
 	$("#twitterBtn").on("click", function() {
 		$.mobile.changePage($("#twitter"));
 	});
-	
 }); //End of api pageinit
 
 $("#facebook").on("pageinit", function() {
@@ -147,8 +144,67 @@ $("#twitter").on("pageinit", function() {
 }); //End of twitter pageinit
 
 $("#native").on("pageinit", function() {
-	//Code needed for native goes here
+
+	//Changepage function for camera button
+	$("#camera").on("click", function() {
+		$.mobile.changePage($("#cameraPage"));
+	});
+	
+	//Changepage function for contacts button
+	$("#contacts").on("click", function() {
+		$.mobile.changePage($("#contactsPage"));
+	});
+	
+	//Geolocation changePage and function call
+	$("#geoloc").on("click", function() {
+		$.mobile.changePage($("#geoPage"));
+		setTimeout(showGeo, 1000);
+	});
+	
+	//Changepage function for microphone button
+	$("#mic").on("click", function() {
+		$.mobile.changePage($("#micPage"));
+	});	
 }); //End of native pageinit
+
+$("#cameraPage").on("pageinit", function() {
+
+	var pictureSource;   //picture source
+	var destinationType; //sets the format of returned value 
+    //Wait for Cordova to connect with the device
+    document.addEventListener("deviceready",onDeviceReady,false);
+    function onDeviceReady() {
+        pictureSource = navigator.camera.PictureSourceType;
+        destinationType = navigator.camera.DestinationType;
+    };
+    
+    //Called when a photo is successfully retrieved
+    function onPhotoDataSuccess(imageData) {
+    //console.log(imageData);
+    //Get image handle
+    var picture = document.getElementById("picture");
+        //Unhide image elements
+        picture.style.display = "block";
+        //Show the captured photo
+        picture.src = "data:image/jpeg;base64," + imageData;
+    };
+    
+    //Take picture function
+    function takePictureEdit() {
+    //Take picture using device camera, allow edit, and retrieve image as base64-encoded string  
+    navigator.camera.getPicture(onPhotoDataSuccess, onFail, {quality: 50, allowEdit: true, destinationType: destinationType.DATA_URL});
+    };
+
+    //Error function called if something goes wrong.
+    function onFail(message) {
+      alert("Failed because: " + message);
+    };
+    
+	//Take picture click event
+	$("#captureEdit").on("click", function() {
+		takePictureEdit();
+	});
+}); //End of cameraPage pageinit
 
 $("#research").on("pageinit", function() {
 	//week 1 changePage
@@ -188,7 +244,50 @@ $(".api").on("click", function() {
 	$.mobile.changePage($("#api"));
 });
 
+//changePage function for return to native buttons on native pages
+$(".native").on("click", function() {
+	$.mobile.changePage($("#native"));
+});
+
 //changePage function for home buttons on navbar and error404
 $(".home").on("click", function() {
 	$.mobile.changePage($("#index"));
 });
+
+//Global function for device info on native and in navbar
+$(".device").on("click", function() {
+	$.mobile.changePage($("#deviceInfo"));
+	setTimeout(showDeviceInfo, 750);
+	//alert("device clicked");
+});
+
+//Device Info function, fired when "device info" is clicked
+function showDeviceInfo() {
+	var devInfo = document.getElementById("deviceDisplay");
+
+    devInfo.innerHTML = "Device Name: "      + device.name     + "<br/>" + 
+                        "Device Model: "     + device.model    + "<br/>" + 
+                        "Device Platform: "  + device.platform + "<br/>" + 
+                        "Platform Version: " + device.version  + "<br/>" + 
+                        "Device UUID: "      + device.uuid     + "<br/>" +
+                        "Cordova Version: "  + device.cordova  + "<br/>";
+};
+
+//Geolocation function to grab current position
+function showGeo() {
+	var option = {enableHighAccuracy: true};
+    navigator.geolocation.getCurrentPosition(onSuccess, onError, option);
+};
+//onSuccess displays current geolocation
+function onSuccess(position) {
+    var currentGeo = document.getElementById("currentLoc");
+    currentGeo.innerHTML = "Latitude: "  + position.coords.latitude  + "<br/>" +
+                           "Longitude: " + position.coords.longitude + "<br/>" +
+                           "Accuracy: "  + position.coords.accuracy  + "<br/>" +
+                           "Timestamp: " + position.timestamp        + "<br/>";
+};
+//onError displays an error if something went wrong (haven't tested this)
+function onError(error) {
+    alert("code: "    + error.code    + "\n" + //\n stands for new line in unix?(similar br tag)
+          "message: " + error.message + "\n");
+};//Geolocation ends here

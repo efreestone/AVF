@@ -25,7 +25,8 @@ body {
 
 .ui-page { /* Override JQM background and replace with my background*/
 	background-image: url("images/background-1.jpg");
-    background-repeat: repeat-xy;
+    background-size: 100% auto;
+    background-repeat: repeat-y;
 }
 
 .ui-btn-inner { /* box around navbar buttons */
@@ -120,6 +121,13 @@ h4 { /* date and time in tweets */
 
 img { /* user profile pictures */
 	margin: 10px;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+img.taken {
+	width: 70%;
+	display: none;
 }
 
 p { /* error404 message and research topics */
@@ -244,6 +252,7 @@ input.search {
     padding: 5px;
     font-family: "Helvetica", "Arial", sans-serif;
     font-size: 20px;
+    color: #020282;
     display: block;
     margin-left: auto;
     margin-right: auto;
