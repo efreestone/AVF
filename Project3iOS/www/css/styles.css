@@ -25,7 +25,8 @@ body {
 
 .ui-page { /* Override JQM background and replace with my background*/
 	background-image: url("images/background-1.jpg");
-    background-repeat: repeat-xy;
+	background-size: 100% auto;
+    background-repeat: repeat-y;
 }
 
 .ui-btn-inner { /* box around navbar buttons */
@@ -121,6 +122,14 @@ h4 { /* date and time in tweets */
 
 img { /* user profile pictures */
 	margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.taken {
+	/*height:400px;*/
+	width: 70%;
+	display: none;
 }
 
 p { /* error404 message, page titles and research topics */
@@ -138,6 +147,12 @@ p { /* error404 message, page titles and research topics */
     padding: 10px;
     box-shadow: -3px 3px 8px 2px rgba(0,0,0,0.3);
     width: auto;
+}
+
+p.title {
+	margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 15px;
 }
 
 .event {
@@ -178,14 +193,13 @@ p { /* error404 message, page titles and research topics */
 
 header { /* name and assignment */
 	font-family: "Helvetica", "Arial", sans-serif;
-    margin:0px;
     overflow:visible;
     padding:0px;
     text-align:center;
     background-color: #f3f3f3;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    margin: 20px 75px;
+    margin: 20px 30%;
     padding: 1px 10px;
     box-shadow: -3px 3px 8px 2px rgba(0,0,0,0.3);
 }
@@ -212,8 +226,8 @@ a.button { /* native and api buttons */
     display: block;
     margin-top: 15px;
     margin-bottom: 10px;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
     box-shadow: -3px 3px 8px 2px rgba(0,0,0,0.3);
 }
 
@@ -234,12 +248,13 @@ label.hidden { /* hide form labels without hiding from screen readers*/
 
 input.search {
 	-webkit-appearance: none;
-	width: 70%;
-    height: 40px;
+	width: 75%;
+    height: 45px;
     border: 2px solid #29abe2;
     padding: 5px;
     font-family: "Helvetica", "Arial", sans-serif;
-    font-size: 20px;
+    font-size: 30px;
+    color: #020282;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -265,7 +280,7 @@ div.results { /* facebook and twitter results */
     /*border: solid 1px #172934;*/
     margin-left: 25px;
     margin-right: 25px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     padding: 10px;
     box-shadow: -3px 3px 8px 2px rgba(0,0,0,0.3);
     width: auto;
