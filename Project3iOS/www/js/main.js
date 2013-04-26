@@ -296,7 +296,7 @@ function onSuccess(position) {
                            "Altitude Accuracy: " + position.coords.altitudeAccuracy + "<br/>" +
                            "Timestamp: "         + position.timestamp               + "<br/>";
 };
-//onError displays an error if something went wrong (haven't tested this)
+//onError displays an error if something went wrong
 function onError(error) {
     alert("code: "    + error.code    + "\n" + //\n stands for new line in unix?(similar br tag)
           "message: " + error.message + "\n");
