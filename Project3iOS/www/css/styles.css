@@ -246,7 +246,7 @@ label.hidden { /* hide form labels without hiding from screen readers*/
 	left: -9999px !important;
 }
 
-input.search {
+input.search { /* Search boxes for twitter, facebook and contacts */
 	-webkit-appearance: none;
 	width: 75%;
     height: 45px;
@@ -284,4 +284,12 @@ div.results { /* facebook and twitter results */
     padding: 10px;
     box-shadow: -3px 3px 8px 2px rgba(0,0,0,0.3);
     width: auto;
+}
+
+iframe { /* Youtube video */
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+    width: 560px;
+    height: 315px; 
 }

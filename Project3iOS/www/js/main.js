@@ -15,25 +15,25 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener("deviceready", this.onDeviceReady, false);
     },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
+        app.receivedEvent("deviceready");
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+        var listeningElement = parentElement.querySelector(".listening");
+        var receivedElement = parentElement.querySelector(".received");
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+        listeningElement.setAttribute("style", "display:none;");
+        receivedElement.setAttribute("style", "display:block;");
 
-        console.log('Received Event: ' + id);
+        console.log("Received Event: " + id);
     }
 };
 
@@ -53,6 +53,11 @@ $("#index").on("pageinit", function() {
 	$("#seeResearch").on("click", function() {
 		$.mobile.changePage($("#research"));
 	});	
+	
+	//Changepage function for video button
+	$("#seeVideo").on("click", function() {
+		$.mobile.changePage($("#vidPage"));
+	});
 }); //End of index pageinit
 
 $("#api").on("pageinit", function() {
@@ -202,6 +207,47 @@ $("#cameraPage").on("pageinit", function() {
 		takePictureEdit();
 	});
 }); //End of cameraPage pageinit
+
+$("#contactsPage").on("pageinit", function() {
+	//Search contacts function
+    function onDeviceReady() {
+    	//Grab search term from input field
+    	var contactTerm = $("#contactTerm").val();
+        var options = new ContactFindOptions();
+        options.filter = contactTerm; 
+        options.multiple = true;
+        var fields = ["displayName", "name", "emails", "phoneNumbers"];
+        navigator.contacts.find(fields, onSuccess, onError, options);
+    };
+
+    //Display contact if successfull
+    function onSuccess(contacts) {
+    for (var i=0; i<contacts.length; i++) {
+        //alert("First Name: "   + contacts[i].name.givenName        + "\n" + 
+              //"Last Name: "    + contacts[i].name.familyName       + "\n" +
+              //"Phone Number :" + contacts[i].phoneNumbers[i].value + "\n" +
+              //"Email: "        + contacts[i].emails[i].value);
+              //console.log(contacts);
+              
+        var conResults = document.getElementById("conResults");
+        //$("#conResults").empty(); 
+    	conResults.innerHTML = "First Name: "   + contacts[i].name.givenName        + "<br/>" + 
+                               "Last Name: "    + contacts[i].name.familyName       + "<br/>" + 
+                               "Phone Number: " + contacts[i].phoneNumbers[0].value + "<br/>" + 
+                               "Email: "        + contacts[i].emails[0].value; 
+        }     
+    };
+    
+    //Display error message if failed
+    function onError(contactError) {
+        alert("Search failed");
+    };
+    
+    //Click event and function call
+    $("#contactSearch").on("click", function() {
+	    onDeviceReady();
+    });
+}); //End of contactsPage pageinit
 
 $("#research").on("pageinit", function() {
 	//Code needed for research goes here
