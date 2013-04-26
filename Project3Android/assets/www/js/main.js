@@ -53,6 +53,11 @@ $("#index").on("pageinit", function() {
 	$("#seeResearch").on("click", function() {
 		$.mobile.changePage($("#research"));
 	});
+	
+	//Changepage function for video button
+	$("#seeVideo").on("click", function() {
+		$.mobile.changePage($("#vidPage"));
+	});
 }); //End of index pageinit
 
 $("#api").on("pageinit", function() {
@@ -117,7 +122,7 @@ $("#twitter").on("pageinit", function() {
 			$("#twitResults").empty(); 
 			$.ajax({
 				type: "GET",
-				dataType: "jsonp", //this was set to json in my phone demo. Works in emulator as jsonp though.
+				dataType: "jsonp", //set to json in my phone demo. Works in emulator or on wifi as jsonp though.
 				//headers: {"Access-Control-Allow-Origin" : "*"},
 				//jsonp: false,
 				//jsonp: 'jsoncallback',
@@ -205,6 +210,47 @@ $("#cameraPage").on("pageinit", function() {
 		takePictureEdit();
 	});
 }); //End of cameraPage pageinit
+
+$("#contactsPage").on("pageinit", function() {
+	//Search contacts function
+    function onDeviceReady() {
+    	//Grab search term from input field
+    	var contactTerm = $("#contactTerm").val();
+        var options = new ContactFindOptions();
+        options.filter = contactTerm; 
+        options.multiple = true;
+        var fields = ["displayName", "name", "emails", "phoneNumbers"];
+        navigator.contacts.find(fields, onSuccess, onError, options);
+    };
+
+    //Display contact if successful
+    function onSuccess(contacts) {
+    for (var i=0; i<contacts.length; i++) {
+        //alert("First Name: "   + contacts[i].name.givenName        + "\n" + 
+              //"Last Name: "    + contacts[i].name.familyName       + "\n" +
+              //"Phone Number :" + contacts[i].phoneNumbers[0].value + "\n" +
+              //"Email: "        + contacts[i].emails[0].value);
+              //console.log(contacts);
+        
+        var conResults = document.getElementById("conResults");
+        //$("#conResults").empty(); 
+    	conResults.innerHTML = "First Name: "   + contacts[i].name.givenName        + "<br/>" + 
+                               "Last Name: "    + contacts[i].name.familyName       + "<br/>" + 
+                               "Phone #: " + contacts[i].phoneNumbers[0].value + "<br/>" + 
+                               "Email: "        + contacts[i].emails[0].value; 
+        }  
+    };
+    
+    //Display error message if failed
+    function onError(contactError) {
+        alert("Search failed");
+    };
+    
+    //Click event and function call
+    $("#contactSearch").on("click", function() {
+	    onDeviceReady();
+    });
+}); //End of contactsPage pageinit
 
 $("#research").on("pageinit", function() {
 	//week 1 changePage

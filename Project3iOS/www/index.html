@@ -45,6 +45,8 @@
 					<li><a href="#" id="seeNative" class="button" data-role="none" Data-ajax="true">Native Features</a></li>
 			
 					<li><a href="#" id="seeResearch" class="button" data-role="none" Data-ajax="true">Research Topics</a></li>
+					
+					<li><a href="#" id="seeVideo" class="button" data-role="none" Data-ajax="true">Embedded Video</a></li>
 				</ul>
 			</nav>
 
@@ -191,7 +193,7 @@
 			
 					<li><a href="#" id="geoloc" class="button" data-role="none" Data-ajax="false">Geolocation</a></li>
 			
-					<li><a href="#" id="mic" class="button" data-role="none" Data-ajax="false">Microphone</a></li>
+					<!--<li><a href="#" id="mic" class="button" data-role="none" Data-ajax="false">Microphone</a></li>-->
 				</ul>
 			</nav>
 			
@@ -251,6 +253,14 @@
 			
 			<p id="contactsTitle" class="title">Contacts</p>
 			
+			<form>
+				<label for="contactTerm" class="hidden">Contacts Search</label>
+				<input type="search" class="search" id="contactTerm" value="" data-role="none" placeholder="Enter search term">
+					<a href="#" id="contactSearch" class="button smaller" Data-ajax="false">Search Contacts</a>
+			</form>
+		<!-- P tag to display search results -->	
+			<p id="conResults">Your search results will appear here</p>
+
 			<nav>
 				<ul>
 					<li><a href="#native" class="button smaller" data-role="none" Data-ajax="false">Return to Native</a></li>
@@ -606,6 +616,37 @@
 		<!-- End of navbar -->
 		</section>
 	<!-- End of week4 -->
+	
+	<!-- Start of vidPage -->
+		<section data-role="page" id="vidPage">
+			<header>
+				<h1>Elijah Freestone</h1>
+					<h2>Project 3 iOS</h2>
+						<h3>AVF 1304</h3>
+			</header>
+			
+			<p id="vidTitle" class="title">Embedded Video</p>
+			
+			<iframe src="http://www.youtube.com/embed/2SLI59ExUbI?html5=1" frameborder="0" allowfullscreen></iframe>
+			
+			<nav>
+				<ul>
+					<li><a href="#" class="button smaller home" data-role="none" Data-ajax="false">Return Home</a></li>
+				</ul>
+			</nav>
+			
+		<!-- Start of navbar -->
+			<section data-role="none" data-position="fixed" data-id="index">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#" class="home" Data-ajax="false">Home</a></li>
+						<li><a href="#" class="device navbar" Data-ajax="false">Device Info</a></li>
+					</ul>
+				</nav>
+			</section>
+		<!-- End of navbar -->
+		</section>
+	<!-- End of vidPage -->
 	
 	<!-- Start of error404 -->
 		<section data-role="page" id="error404">
