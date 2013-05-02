@@ -40,8 +40,13 @@ var app = {
 $("#index").on("pageinit", function() {
 
 	//Changepage function for api button
-	$("#seeAPI").on("click", function() {
+	$("#seeAPI").on("tap", function() {
 		$.mobile.changePage($("#api"));
+	});
+	
+	//Changepage function for mashups button
+	$("#seeMashups").on("click", function() {
+		$.mobile.changePage($("#mashup"));
 	});
 	
 	//Changepage function for native button
@@ -123,7 +128,8 @@ $("#twitter").on("pageinit", function() {
 			$.ajax({
 				type: "GET",
 				dataType: "jsonp",
-				url: "http://search.twitter.com/search.json?",
+				url: "http://search.twitter.com/search.json?include_entities=true",
+				//include_entities: true,
 				data:{q: twitTerm},
 				success: function(data) {
 					console.log(data);
@@ -136,6 +142,7 @@ $("#twitter").on("pageinit", function() {
                             .append($("<h2>" + this.from_user_name + "</h2>"))
                             .append($("<h3>" + this.text + "</h3>")
                             .attr("class", "result"))
+                            //.append($("<a href=" + this.entities.urls.expanded_url + ">" + this.entities.urls.url + "</a>"))
                             .append($("<h4>" + this.created_at + "</h4>"))
                         );
                     });
@@ -144,6 +151,61 @@ $("#twitter").on("pageinit", function() {
 		};
 	});
 }); //End of twitter pageinit
+
+$("#mashup").on("pageinit", function() {
+	
+	//Changepage function for weather button
+	$("#weatherBtn").on("click", function() {
+		$.mobile.changePage($("#weatherPage"));
+	});
+
+}); //End of mashup pageinit
+
+$("#weatherPage").on("pageinit", function() {
+	
+	var lat, lon;
+
+	$("#getWeather").on("click", function(){
+		//get current geolocation
+		var success = function(position){
+			var lat = position.coords.latitude;
+			var lon = position.coords.longitude;
+			
+			$("#weatherDisp").empty(); 
+			//Retrieve current weather based on current geo
+			$.ajax({
+				url : "http://api.wunderground.com/api/193b989b6db00f80/geolookup/conditions/q/" + lat + "," + lon + ".json",
+				dataType: "json",
+				success: function(data){
+				//console.log(data);
+				var location = data.current_observation.display_location.full;
+				var icon = data.current_observation.icon_url; 
+				var temp = data.current_observation.temp_f;
+				var weather = data.current_observation.weather;
+				var feel = data.current_observation.feelslike_f;
+				var time = data.current_observation.observation_time;
+				//Displat current weather in weatherDisp
+				$("#weatherDisp").append($("<div>")
+                				 .attr("class", "results")
+                				 .append($("<h1>" + location + "</h1>"))
+                				 .append($("<img src=" + icon + ">")
+                				 .attr("id", "weatherIcon"))
+                				 .append($("<h2>" + "Current Weather: " + weather + "</h2>"))
+                				 .append($("<h2>" + "Temp: " + temp + "&deg;F" + "</h2>"))
+                				 .append($("<h3>"+"Feels Like: " + feel + "&deg;F" + "</h3>"))
+                				 .append($("<h4>" + time + "</h3>"))
+                	);
+                }
+            })
+        }
+    
+    var error = function(error){
+	    alert(error.message)
+	}
+		navigator.geolocation.getCurrentPosition(success, error);
+	});
+	
+}); //End of weatherPage pageinit
 
 $("#native").on("pageinit", function() {
 	
@@ -189,6 +251,7 @@ $("#cameraPage").on("pageinit", function() {
         picture.style.display = "block";
         //Show the captured photo
         picture.src = "data:image/jpeg;base64," + imageData;
+        return imageData;
     };
     
     //Take picture function
@@ -301,3 +364,4 @@ function onError(error) {
     alert("code: "    + error.code    + "\n" + //\n stands for new line in unix?(similar br tag)
           "message: " + error.message + "\n");
 };//Geolocation ends here
+

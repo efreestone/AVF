@@ -132,6 +132,11 @@ img.taken {
 	display: none;
 }
 
+img#weatherIcon {
+	width: 15%;
+	margin-top: -25px;
+}
+
 p { /* error404 message, page titles and research topics */
 	font-size: 20px;
 	font-weight: normal;
@@ -275,6 +280,7 @@ div.results { /* facebook and twitter results */
     overflow:visible;
     text-align:center;
     background-color: #f3f3f3;
+    /*opacity: .75;*/
     -webkit-border-radius: 10px;
     border-radius: 10px;
     /*border: solid 1px #172934;*/
