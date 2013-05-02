@@ -41,6 +41,8 @@
 			<nav>
 				<ul>
 					<li><a href="#" id="seeAPI" class="button" data-role="none" Data-ajax="true">Data APIs</a></li>
+					
+					<li><a href="#" id="seeMashups" class="button" data-role="none" Data-ajax="true">Data/Native Mashups</a></li>
 			
 					<li><a href="#" id="seeNative" class="button" data-role="none" Data-ajax="true">Native Features</a></li>
 			
@@ -171,6 +173,37 @@
 		<!-- End of navbar -->
 		</section>
 	<!-- End of twitter -->
+	
+	<!-- Start of mashup -->
+		<section data-role="page" id="mashup">
+			<header>
+				<h1>Elijah Freestone</h1>
+					<h2>Project 4 iOS</h2>
+						<h3>AVF 1304</h3>
+			</header>
+			
+			<p id="mashTitle" class="title">Data/Native Mashups</p>
+			
+			<nav>
+				<ul>
+					<li><a href="#" id="weatherBtn" class="button" data-role="none" Data-ajax="false">Current Weather</a></li>
+					
+					<li><a href="#" id="twitterBtn" class="button" data-role="none" Data-ajax="false">Twitter Search</a></li>
+				</ul>
+			</nav>
+			
+		<!-- Start of navbar -->
+			<section data-role="none" data-position="fixed" data-id="index">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#" class="home" Data-ajax="false">Home</a></li>
+						<li><a href="#" class="device navbar" Data-ajax="false">Device Info</a></li>
+					</ul>
+				</nav>
+			</section>
+		<!-- End of navbar -->
+		</section>
+	<!-- End of mashup -->
 	
 	<!-- Start of native -->
 		<section data-role="page" id="native">
@@ -341,22 +374,30 @@
 		</section>
 	<!-- End of geoPage -->
 
-	<!-- Start of micPage -->
-		<section data-role="page" id="micPage">
+	<!-- Start of weatherPage -->
+		<section data-role="page" id="weatherPage">
 			<header>
 				<h1>Elijah Freestone</h1>
-					<h2>Project 4 Android</h2>
+					<h2>Project 4 iOS</h2>
 						<h3>AVF 1304</h3>
 			</header>
 			
-			<p id="micTitle">Microphone</p>
+			<p id="weatherTitle" class="title">Current Weather</p>
+			
+			<a id="getWeather" class="button">Get Current Weather</a>
+			
+			<section id="weatherDisp">
+				<!-- Current weather will display here-->
+				<p>Current Weather Will Display here.</p>
+			</section>
 			
 			<nav>
 				<ul>
-					<li><a href="#" class="button smaller native" data-role="none" Data-ajax="false">Return to Native</a></li>
+					<li>
+						<a href="#" class="button smaller home" data-role="none" Data-ajax="false">Return Home</a>
+					</li>
 				</ul>
 			</nav>
-			
 		<!-- Start of navbar -->
 			<section data-role="none" data-position="fixed" data-id="index">
 				<nav data-role="navbar">
@@ -368,7 +409,7 @@
 			</section>
 		<!-- End of navbar -->
 		</section>
-	<!-- End of micPage -->
+	<!-- End of weatherPage -->
 	
 	<!-- Start of research -->
 		<section data-role="page" id="research">
