@@ -125,12 +125,12 @@ img { /* user profile pictures */
     margin-right: auto;
 }
 
-img.taken {
+img.taken {  /* image from native camera function */ 
 	width: 70%;
 	display: none;
 }
 
-img#weatherIcon {
+img#weatherIcon { /* icon on weather mashup */
 	width: 15%;
 	margin-top: -25px;
 }
@@ -295,4 +295,13 @@ iframe { /* Youtube video */
     margin-right: auto;
     width: 320px;
     height: 180px; 
+}
+
+div#googleMap { /* Map in google maps geo mashup */
+	/*display: block;*/
+	margin-left: auto;
+	margin-right: auto;
+	display: none;
+	width: 60%;
+	height: 250px;
 }

@@ -126,13 +126,13 @@ img { /* user profile pictures */
     margin-right: auto;
 }
 
-img.taken {
+img.taken { /* image from native camera function */ 
 	/*height:400px;*/
 	width: 70%;
 	display: none;
 }
 
-img#weatherIcon {
+img#weatherIcon { /* icon on weather mashup */
 	width: 15%;
 	margin-top: -25px;
 }
@@ -154,7 +154,7 @@ p { /* error404 message, page titles and research topics */
     width: auto;
 }
 
-p.title {
+p.title { /* page titles */
 	margin-left: 150px;
     margin-right: 150px;
     margin-bottom: 15px;
@@ -298,4 +298,13 @@ iframe { /* Youtube video */
     margin-right: auto;
     width: 560px;
     height: 315px; 
+}
+
+div#googleMap { /* Map in google maps geo mashup */
+	/*display: block;*/
+	margin-left: auto;
+	margin-right: auto;
+	display: none;
+	width: 70%;
+	height: 50vh;
 }
