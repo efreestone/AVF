@@ -154,6 +154,11 @@ $("#twitter").on("pageinit", function() {
 
 $("#mashup").on("pageinit", function() {
 	
+	//Changepage function for google maps button
+	$("#gMapsBtn").on("click", function() {
+		$.mobile.changePage($("#gMapsPage"));
+	});
+	
 	//Changepage function for weather button
 	$("#weatherBtn").on("click", function() {
 		$.mobile.changePage($("#weatherPage"));
@@ -161,9 +166,56 @@ $("#mashup").on("pageinit", function() {
 
 }); //End of mashup pageinit
 
+$("#gMapsPage").on("pageinit", function() {
+
+	$("#searchMap").on("click", function() {
+		// Check if the browser or device supports the Geolocation API.
+		if (navigator.geolocation) {
+			// Get the location
+			navigator.geolocation.getCurrentPosition(function(position) {
+				var lat = position.coords.latitude;
+				var lon = position.coords.longitude;
+				// Show the map
+				displayMap(lat, lon);
+			});
+		} else {
+			// Alert user.
+			alert("Geolocation isn't supported or has been blocked.");
+		}
+	});
+
+	// Show position on a map.
+	function displayMap(lat, lon) {
+		// Create a LatLng object with the geolocation coordinates.
+		var myLocation = new google.maps.LatLng(lat, lon);
+
+		// Create the Map Options
+		var mapOptions = {
+			zoom: 15,
+			center: myLocation,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		
+		$("#googleMap").empty(); 
+		
+		var googleMap = document.getElementById("googleMap");
+        //Unhide map div element
+        googleMap.style.display = "block";
+		// Generate the Map from Google
+		var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+
+		// Add a Marker to show current position
+		var marker = new google.maps.Marker({
+    		position: myLocation,
+    		map: map,
+    		title: "You are here!"
+    	});
+    };
+}); //End of gMapsPage pageinit
+
 $("#weatherPage").on("pageinit", function() {
 	
-	var lat, lon;
+	//var lat, lon;
 
 	$("#getWeather").on("click", function(){
 		//get current geolocation
